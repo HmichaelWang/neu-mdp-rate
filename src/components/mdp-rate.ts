@@ -28,7 +28,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'mdp-rate',
   template: `
   <div class="rate-label">
-  <ion-icon *ngFor="let rate of rates" (click)="rageNum(rate)" [name]="rate.showIcon" [ngStyle]="{'color':rate.selColor}"></ion-icon>
+  <ion-icon tappable *ngFor="let rate of rates" (click)="rageNum(rate)" [name]="rate.showIcon" [ngStyle]="{'color':rate.selColor}"></ion-icon>
   <span *ngIf="showText" [ngStyle]="{'color':rateTextColor}">{{rateFzText}}</span>
 </div>`
 })
